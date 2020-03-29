@@ -25,7 +25,7 @@ bool EveryXFrames(uint8_t frames)
 static bool nextFrame(void)
 {
   long now = HAL_GetTick();//µ±«∞∫¡√Î ˝
-  uint8_t remaining;
+  //uint8_t remaining;
 
   // post render
   if (post_render) {
@@ -36,7 +36,7 @@ static bool nextFrame(void)
 
   // if it's not time for the next frame yet
   if (now < nextFrameStart) {
-    remaining = nextFrameStart - now;
+    //remaining = nextFrameStart - now;
     // if we have more than 1ms to spare, lets sleep
     // we should be woken up by timer0 every 1ms, so this should be ok
     //if (remaining > 1)
